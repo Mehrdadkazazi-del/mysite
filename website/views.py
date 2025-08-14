@@ -1,7 +1,10 @@
 from django.http import HttpResponse, JsonResponse
 
-def http_test(request):
-    return HttpResponse("<h1>salam</h1>")
+def index_view(request):
+    return HttpResponse("<h1>Home page</h1>")
 
-def json_test(request):
-    return JsonResponse({'hello': 'world'})
+def about_view(request):
+    return HttpResponse({'<h1>About page</h1>'})
+
+def contact_view(request):
+    return HttpResponse({'<h1>Contact page</h1>'})

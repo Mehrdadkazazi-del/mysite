@@ -18,8 +18,8 @@ Including another URLconf
 from django.urls import path, include
 
 import website
-from website.views import http_test , json_test
 urlpatterns = [
     #    path('admin/', admin.site.urls),
-    path('website/', include('website.urls')),
+    path('', include('website.urls')),
+    # path('blog/', include('blog.urls')),
 ]
