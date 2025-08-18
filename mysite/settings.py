@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website.apps.WebsiteConfig'
+    'website.apps.WebsiteConfig',
+    'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
@@ -124,6 +126,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 STATICFILES_DIRS = [
     BASE_DIR / "statics"
 ]
+
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'statics',
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
