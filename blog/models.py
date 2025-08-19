@@ -16,5 +16,10 @@ class Post(models.Model):
     updated_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
+    class Meta:
+        db_table = 'blog_post'
+        ordering = ('-created_date',)
+
+
     def __str__(self):
         return f"{self.title}-{self.id}"
